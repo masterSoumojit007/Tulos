@@ -4,7 +4,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa"; //
 const ComingSoonPage: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center max-w-lg mx-auto p-8 bg-white rounded-2xl ">
+      <div className="text-center max-w-lg mx-auto p-8 bg-white rounded-2xl">
         <h1 className="text-4xl sm:text-6xl font-extrabold text-gray-800 mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Coming Soon!
         </h1>
@@ -16,7 +16,7 @@ const ComingSoonPage: React.FC = () => {
         {/* Social media buttons with hover animations */}
         <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 flex-wrap">
           <a
-            href="mailto:soumojitbanerjee22@.com"
+            href="mailto:soumojitbanerjee22&#64;gmail.com"
             className="p-4 sm:p-5 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 mb-4 sm:mb-0"
           >
             <FaEnvelope size={28} />
