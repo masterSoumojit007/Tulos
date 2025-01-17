@@ -31,7 +31,7 @@ const ProductGrid = () => {
       }
     };
     fetchData();
-  }, [selectedTab]); // Only depend on selectedTab for effect
+  }, [selectedTab, query, params]); // Added 'query' and 'params' as dependencies
 
   return (
     <div className="mt-10 flex flex-col items-center px-4 sm:px-6 md:px-8">
