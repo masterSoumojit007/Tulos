@@ -9,7 +9,7 @@ const ComingSoonPage: React.FC = () => {
           Coming Soon!
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 mb-8 animate__animated animate__fadeIn animate__delay-2s">
-          We're working hard to bring you something amazing. Stay tuned for
+          We&apos;re working hard to bring you something amazing. Stay tuned for
           updates!
         </p>
 
