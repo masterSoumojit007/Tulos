@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import SocialMedia from "./SocialMedia";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
-import Image from "next/image";
+import Image from "next/image"; // Keep the import for Image
 
 interface SidebarProps {
   isOpen: boolean;
@@ -45,7 +45,13 @@ const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between">
           <button onClick={onClose} className="flex items-center">
             {/* Logo Image */}
-            <img src="/favicon.png" alt="Logo" className="mr-2 h-8 w-auto" />
+            <Image
+              src="/favicon.png"
+              alt="Logo"
+              className="mr-2"
+              width={32} // Set appropriate width
+              height={32} // Set appropriate height
+            />
             <Logo className="text-white text-xl">Tulos</Logo>
           </button>
           <button
