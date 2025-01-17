@@ -49,7 +49,7 @@ const SuccessPage = () => {
         <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8 bg-white shadow-md rounded-lg p-6 sm:p-8 text-center sm:text-left">
           <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
             🎉{" "}
-            <span className="font-semibold">Thank you for your purchase!</span>{" "}
+            <span className="font-semibold">Thank you for your purchase!&#39;</span>{" "}
             Your order is being processed and will be shipped soon. A
             confirmation email with your order details is on its way.
           </p>

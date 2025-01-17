@@ -24,8 +24,8 @@ const AboutPage = () => {
         </p>
         <p className="text-lg text-gray-700 leading-relaxed">
           Our mission is to help businesses navigate the complexities of the digital age by
-          delivering tailogray solutions that enhance efficiency, streamline operations, and drive
-          growth. Whether you're a startup or an enterprise, we are here to help you succeed in an
+          delivering tailored solutions that enhance efficiency, streamline operations, and drive
+          growth. Whether you&apos;re a startup or an enterprise, we are here to help you succeed in an
           ever-changing technological landscape.
         </p>
       </div>

@@ -11,17 +11,19 @@ import ProductCard from "./ProductCard";
 
 const ProductGrid = () => {
   const [selectedTab, setSelectedTab] = useState(productType[0]?.title || "");
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
-  const query = `*[_type == 'product' && variant ==$variant] | order(name asc)`;
-  const params = { variant: selectedTab.toLocaleLowerCase() };
+
+  // Query and params are dependent on the selected tab.
+  const query = `*[_type == 'product' && variant == $variant] | order(name asc)`;
+  const params = { variant: selectedTab.toLowerCase() };
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await client.fetch(query, params);
-        setProducts(await response);
+        setProducts(response);
       } catch (error) {
         console.log("Product fetching Error", error);
       } finally {
@@ -29,7 +31,7 @@ const ProductGrid = () => {
       }
     };
     fetchData();
-  }, [selectedTab]);
+  }, [selectedTab]); // Only depend on selectedTab for effect
 
   return (
     <div className="mt-10 flex flex-col items-center px-4 sm:px-6 md:px-8">
@@ -47,16 +49,16 @@ const ProductGrid = () => {
       ) : (
         <>
           {/* No Products or Product Grid */}
-          {products?.length ? (
+          {products.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 w-full">
-              {products?.map((product: Product) => (
+              {products.map((product: Product) => (
                 <AnimatePresence key={product?._id}>
                   <motion.div
                     layout
                     initial={{ opacity: 0.2 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex justify-center" // Ensure cards are centegray in their grid cell
+                    className="flex justify-center" // Ensure cards are centered in their grid cell
                   >
                     <ProductCard product={product} />
                   </motion.div>

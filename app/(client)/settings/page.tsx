@@ -16,7 +16,7 @@ const ComingSoonPage: React.FC = () => {
         {/* Social media buttons with hover animations */}
         <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 flex-wrap">
           <a
-            href="mailto:soumojitbanerjee22@.com"
+            href="mailto:soumojitbanerjee22@gmail.com"
             className="p-4 sm:p-5 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 mb-4 sm:mb-0"
           >
             <FaEnvelope size={28} />

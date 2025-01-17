@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
 
 const NoProductsAvailable = ({
   selectedTab,
@@ -22,10 +23,12 @@ const NoProductsAvailable = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <img
+        <Image
           src="/empty.png"
           alt="No Products"
-          className="w-32 h-32 mx-auto"
+          width={128} // Equivalent to 32px width for the image
+          height={128} // Equivalent to 32px height for the image
+          className="mx-auto"
         />
       </motion.div>
       <motion.h2
@@ -43,8 +46,8 @@ const NoProductsAvailable = ({
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         It looks like we don&apos;t have any products under{" "}
-        <span className="font-semibold text-gray-600">{selectedTab}</span>{" "}
-        right now.
+        <span className="font-semibold text-gray-600">{selectedTab}</span> right
+        now.
       </motion.p>
       <motion.div
         animate={{ scale: [1, 1.05, 1] }}
